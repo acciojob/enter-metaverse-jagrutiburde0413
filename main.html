@@ -7,13 +7,29 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-	  <p id="status">Enter the Metaverse</p>
+  <p id="status">Enter the Metaverse</p>
   <button id="enterBtn">Enter</button>
 
-    <script type="text/javascript" src="./script.js">
-</script>
+  <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get references to the elements
+      const statusParagraph = document.getElementById('status');
+      const enterButton = document.getElementById('enterBtn');
 
+      // Add a click event listener to the button
+      enterButton.addEventListener('click', function() {
+        // Update the text content of the paragraph
+        statusParagraph.textContent = 'Entered Metaverse';
+
+        // Create a new h1 element
+        const heading = document.createElement('h1');
+        heading.textContent = statusParagraph.textContent;
+
+        // Replace the paragraph with the new h1 element
+        statusParagraph.parentNode.replaceChild(heading, statusParagraph);
+      });
+    });
+  </script>
 </body>
-
 </html>
