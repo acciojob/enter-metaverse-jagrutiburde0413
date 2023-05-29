@@ -12,24 +12,21 @@
 
   <script>
     // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get references to the elements
-      const statusParagraph = document.getElementById('status');
-      const enterButton = document.getElementById('enterBtn');
+   // Get the elements
+// Get the elements
+const statusElement = document.getElementById('status');
+const enterBtn = document.getElementById('enterBtn');
 
-      // Add a click event listener to the button
-      enterButton.addEventListener('click', function() {
-        // Update the text content of the paragraph
-        statusParagraph.textContent = 'Entered Metaverse';
+// Add click event listener to the button
+enterBtn.addEventListener('click', function() {
+  // Replace the <p> tag with an <h1> tag
+  const h1 = document.createElement('h1');
+  h1.textContent = 'Entered Metaverse';
+  
+  // Replace the <p> tag with the <h1> tag
+  statusElement.parentNode.replaceChild(h1, statusElement);
+});
 
-        // Create a new h1 element
-        const heading = document.createElement('h1');
-        heading.textContent = statusParagraph.textContent;
-
-        // Replace the paragraph with the new h1 element
-        statusParagraph.parentNode.replaceChild(heading, statusParagraph);
-      });
-    });
   </script>
 </body>
 </html>
