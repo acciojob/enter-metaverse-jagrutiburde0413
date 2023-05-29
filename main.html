@@ -7,26 +7,13 @@
 </head>
 
 <body>
+ 
+
   <p id="status">Enter the Metaverse</p>
   <button id="enterBtn">Enter</button>
 
-  <script>
-    // Wait for the DOM to be fully loaded
-   // Get the elements
-// Get the elements
-const statusElement = document.getElementById('status');
-const enterBtn = document.getElementById('enterBtn');
-
-// Add click event listener to the button
-enterBtn.addEventListener('click', function() {
-  // Replace the <p> tag with an <h1> tag
-  const h1 = document.createElement('h1');
-  h1.textContent = 'Entered Metaverse';
-  
-  // Replace the <p> tag with the <h1> tag
-  statusElement.parentNode.replaceChild(h1, statusElement);
-});
-
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/cypress@9.0.1/dist/cypress.min.js"></script>
+  <script src="script.js"></script>
+  <script src="test.spec.js"></script>
 </body>
 </html>
